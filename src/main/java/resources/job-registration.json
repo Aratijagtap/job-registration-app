@@ -1,0 +1,233 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "entity": {
+                "type": "Project",
+                "id": "392d9ed7-36ed-4db8-899a-a5b00c7f3dca",
+                "name": "Arati"
+            },
+            "children": [
+                {
+                    "entity": {
+                        "type": "Scenario",
+                        "id": "da0da9f5-70e7-458a-bd94-1889c65740de",
+                        "name": "Candidate"
+                    },
+                    "children": [
+                        {
+                            "entity": {
+                                "type": "Request",
+                                "method": {
+                                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                                    "name": "GET"
+                                },
+                                "body": {
+                                    "formBody": {
+                                        "overrideContentType": true,
+                                        "encoding": "application/x-www-form-urlencoded",
+                                        "items": []
+                                    },
+                                    "bodyType": "Text"
+                                },
+                                "uri": {
+                                    "query": {
+                                        "delimiter": "&",
+                                        "items": []
+                                    },
+                                    "scheme": {
+                                        "name": "http",
+                                        "version": "V11"
+                                    },
+                                    "host": "localhost:8080",
+                                    "path": "/api/candidate"
+                                },
+                                "id": "c80288b1-6a82-4479-bbac-913c7bf8465a",
+                                "name": "Get Candidates",
+                                "headers": []
+                            }
+                        },
+                        {
+                            "entity": {
+                                "type": "Request",
+                                "method": {
+                                    "requestBody": true,
+                                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                                    "name": "POST"
+                                },
+                                "body": {
+                                    "formBody": {
+                                        "overrideContentType": true,
+                                        "encoding": "application/x-www-form-urlencoded",
+                                        "items": []
+                                    },
+                                    "bodyType": "Text",
+                                    "textBody": "{\n  \"position\":\"exam1\",\n  \"date\":\"26-Dec-2019\"\n}"
+                                },
+                                "uri": {
+                                    "query": {
+                                        "delimiter": "&",
+                                        "items": []
+                                    },
+                                    "scheme": {
+                                        "name": "http",
+                                        "version": "V11"
+                                    },
+                                    "host": "localhost:8080",
+                                    "path": "/api/exam"
+                                },
+                                "id": "79e21fac-024d-4a45-9fdc-466b2c85b7bf",
+                                "name": "Add Exam",
+                                "headers": [
+                                    {
+                                        "enabled": true,
+                                        "name": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "entity": {
+                                "type": "Request",
+                                "method": {
+                                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                                    "name": "GET"
+                                },
+                                "body": {
+                                    "formBody": {
+                                        "overrideContentType": true,
+                                        "encoding": "application/x-www-form-urlencoded",
+                                        "items": []
+                                    },
+                                    "bodyType": "Text",
+                                    "textBody": "{\n  \"examName\":\"exam2\",\n  \"examDescription\":\"test\",\n  \"fees\":6000  \n}"
+                                },
+                                "uri": {
+                                    "query": {
+                                        "delimiter": "&",
+                                        "items": []
+                                    },
+                                    "scheme": {
+                                        "name": "http",
+                                        "version": "V11"
+                                    },
+                                    "host": "localhost:8080",
+                                    "path": "/api/exam"
+                                },
+                                "id": "0b9a6b92-79d2-4697-b350-fdab624138ed",
+                                "name": "Get All Exams",
+                                "headers": []
+                            }
+                        },
+                        {
+                            "entity": {
+                                "type": "Request",
+                                "method": {
+                                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                                    "name": "GET"
+                                },
+                                "body": {
+                                    "formBody": {
+                                        "overrideContentType": true,
+                                        "encoding": "application/x-www-form-urlencoded",
+                                        "items": []
+                                    },
+                                    "bodyType": "Text",
+                                    "textBody": "{\n  \"examName\":\"exam2\",\n  \"examDescription\":\"test\",\n  \"fees\":6000  \n}"
+                                },
+                                "uri": {
+                                    "query": {
+                                        "delimiter": "&",
+                                        "items": []
+                                    },
+                                    "scheme": {
+                                        "name": "http",
+                                        "version": "V11"
+                                    },
+                                    "host": "localhost:8080",
+                                    "path": "/api/exam/3"
+                                },
+                                "id": "9d4f638f-8f1c-43b1-8ee7-f72ce3e531f7",
+                                "name": "Get Exam by ID",
+                                "headers": []
+                            }
+                        },
+                        {
+                            "entity": {
+                                "type": "Request",
+                                "method": {
+                                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                                    "name": "GET"
+                                },
+                                "body": {
+                                    "formBody": {
+                                        "overrideContentType": true,
+                                        "encoding": "application/x-www-form-urlencoded",
+                                        "items": []
+                                    },
+                                    "bodyType": "Text"
+                                },
+                                "uri": {
+                                    "query": {
+                                        "delimiter": "&",
+                                        "items": []
+                                    },
+                                    "scheme": {
+                                        "name": "http",
+                                        "version": "V11"
+                                    },
+                                    "host": "localhost:8080",
+                                    "path": "/api/candidate/1"
+                                },
+                                "id": "a9fbe030-d686-4555-bc32-24c917632a48",
+                                "name": "Get Candidate by ID",
+                                "headers": []
+                            }
+                        },
+                        {
+                            "entity": {
+                                "type": "Request",
+                                "method": {
+                                    "requestBody": true,
+                                    "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                                    "name": "POST"
+                                },
+                                "body": {
+                                    "formBody": {
+                                        "overrideContentType": true,
+                                        "encoding": "application/x-www-form-urlencoded",
+                                        "items": []
+                                    },
+                                    "bodyType": "Text",
+                                    "textBody": "{\n\n  \"name\":\"hgcbgcghh\",\n  \"qualification\":\"qualification1\",\n  \"experience\":\"4\",\n  \"skills\":\"skill1\",\n  \"exams\":[\"exam1\"]\n}"
+                                },
+                                "uri": {
+                                    "query": {
+                                        "delimiter": "&",
+                                        "items": []
+                                    },
+                                    "scheme": {
+                                        "name": "http",
+                                        "version": "V11"
+                                    },
+                                    "host": "localhost:8080",
+                                    "path": "/api/candidate"
+                                },
+                                "id": "1b2a3148-cbe6-4148-ab73-8443fac28db7",
+                                "name": "Add Candidate",
+                                "headers": [
+                                    {
+                                        "enabled": true,
+                                        "name": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
